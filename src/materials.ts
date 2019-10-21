@@ -41,6 +41,10 @@ export type Material
 	| 'slime'
 	| 'grass';
 
+export type MaterialWeightMap = {
+	[M in Material]?: number;
+};
+
 export const liquidMaterials: Material[] = [
 	'water',
 	'water_ice',

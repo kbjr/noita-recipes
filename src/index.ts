@@ -2,7 +2,8 @@
 import { NoitaAlchemyGenerator } from './generator';
 
 export { Recipe } from './generator';
-export { findSeed } from './seed-finder';
+export { SeedFinder, SeedFinderOptions } from './seed-finder';
+export { Material, MaterialWeightMap, alchemyMaterials, liquidMaterials } from './materials';
 
 export const generateRecipes = (seed: number) => {
 	const generator = new NoitaAlchemyGenerator(seed, false);

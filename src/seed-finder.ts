@@ -1,125 +1,160 @@
 
-import { Material } from './materials';
+import { Material, MaterialWeightMap } from './materials';
 import { NoitaAlchemyGenerator, Recipe } from './generator';
+import { EventEmitter } from 'events';
 
 export interface SeedFinderOptions {
-	/** The seed to start at while checking */
-	start: number;
-	/** The number of seeds to check before exiting */
-	attempts: number;
 	/** A list of materials to exclude (any seed using them is automatically disqualified) */
 	exclude?: Material[];
 	/** The minimum score a seed must achieve to be accepted */
 	minScoreThreshold?: number;
 	/** The maximum material weight allowed on any one material */
 	badMaterialThreshold?: number;
+
+	materialPreferences?: MaterialWeightMap;
+
+	requireMaterials?: {
+		lc?: [ Material?, Material?, Material? ];
+		ap?: [ Material?, Material?, Material? ];
+	};
+
+	minLcProbability: number;
+	maxLcProbability: number;
+	minApProbability: number;
+	maxApProbability: number;
 }
 
-/**
- * Calculates the recipes for a given seed, and calculates scoring information about the seed
- *
- * @param start 
- * @param attempts 
- * @param exclude 
- */
-export const findSeed = (options: SeedFinderOptions) => {
-	const excludeSet = new Set(options.exclude);
-	const badMaterialThreshold = options.badMaterialThreshold || 9;
-	const minScoreThreshold = options.minScoreThreshold == null ? 70 : options.minScoreThreshold;
+export class SeedFinder extends EventEmitter {
+	protected readonly exclude: Set<Material>;
+	protected readonly minScoreThreshold: number;
+	protected readonly badMaterialThreshold: number;
+	protected readonly materialWeights: MaterialWeightMap;
+	protected readonly lcRequired: Set<Material>;
+	protected readonly apRequired: Set<Material>;
+	protected readonly minLcProbability: number;
+	protected readonly maxLcProbability: number;
+	protected readonly minApProbability: number;
+	protected readonly maxApProbability: number;
 
-	console.log();
+	constructor(public readonly options: SeedFinderOptions) {
+		super();
 
-	let highestScore = 0;
-	let bestSeed;
+		this.exclude = new Set(this.options.exclude);
+		this.minScoreThreshold = this.options.minScoreThreshold || 1;
+		this.badMaterialThreshold = this.options.badMaterialThreshold || 17;
+		this.materialWeights = Object.assign({ }, defaultMaterialPreference, this.options.materialPreferences || { });
 
-	for (let i = 0; i < options.attempts; i++) {
-		const seed = options.start + i;
-		const result = calculateSeed(seed, badMaterialThreshold, excludeSet);
+		const required = this.options.requireMaterials || { };
 
-		if (result.hasExcluded || result.hasBad || result.score < minScoreThreshold) {
-			continue;
-		}
+		this.lcRequired = new Set(required.lc || [ ]);
+		this.apRequired = new Set(required.ap || [ ]);
 
-		if (highestScore < result.score) {
-			highestScore = result.score;
-			bestSeed = result;
-		}
-
-		console.log(`Seed ${seed} Score=${result.score}`);
-		console.log(`  Lively Concoction = ${result.livelyConcoction.materials.join(' + ')} // Probability ${result.livelyConcoction.probability}%`);
-		console.log(`  Alchemical Precursor = ${result.alchemicalPrecursor.materials.join(' + ')} // Probability ${result.alchemicalPrecursor.probability}%`);
-		console.log();
+		this.minLcProbability = this.options.minLcProbability || 0;
+		this.maxLcProbability = this.options.maxLcProbability || 100;
+		this.minApProbability = this.options.minApProbability || 0;
+		this.maxApProbability = this.options.maxApProbability || 100;
 	}
 
-	return bestSeed;
-};
+	/**
+	 * Start looking for seeds
+	 *
+	 * @param start The seed to start at while checking
+	 * @param count The number of seeds to check before stopping
+	 */
+	public seek(start: number, count: number) {
+		const end = start + count;
 
-/**
- * Calculates the recipes for a given seed, and calculates scoring information about the seed. The best possible
- * score for a seed would be 98 / 100. This would be water on both recipes (0 points), and two 1 point materials
- * shared between both recipes (1 point each, only counted once because they're reused). An example of this would
- * be "water" + "blood" + "oil" on both recipes. The worst possible score is 100 - (6 * 16), or 4 out of 100.
- *
- * Interestingly, I actually have no idea what would happen if both recipes are exactly the same, so that should
- * be looked into. It's possible that the probability field has some influence on this, and therefore creating
- * the given mixture would actually result in a mix of both results.
- *
- * @param seed The seed to calculate for
- * @param threshold The maximum material weight allowed on any one material
- * @param exclude A list of materials to exclude (any seed using them is automatically disqualified)
- */
-const calculateSeed = (seed: number, threshold: number, exclude: Set<Material>) => {
-	const generator = new NoitaAlchemyGenerator(seed, false);
+		for (let seed = start; seed < end; seed++) {
+			const result = this.calculateSeed(seed);
 
-	let score = 100;
-	let hasBad = false;
-	let hasExcluded = false;
+			if (result.score < this.minScoreThreshold || result.hasExcluded || ! result.hasIncluded || result.hasBadMat || result.hasBadProbability) {
+				continue;
+			}
 
-	// Materials are only counted against the score one each, so if they
-	// are re-used, don't re-count them. This keeps track of the list of
-	// materials we've already seen
-	const used: Set<Material> = new Set();
-	const materials = [
-		...generator.livelyConcoction.materials,
-		...generator.alchemicalPrecursor.materials
-	];
-
-	for (let i = 0; i < materials.length; i++) {
-		const mat = materials[i];
-
-		if (used.has(mat)) {
-			continue;
+			this.emit('seed', result);
 		}
 
-		used.add(mat);
-
-		const matScore = materialPreference[mat];
-
-		if (matScore > threshold) {
-			hasBad = true;
-		}
-
-		if (exclude.has(mat)) {
-			hasExcluded = true;
-		}
-
-		score -= matScore;
+		this.emit('done');
 	}
 
-	return {
-		seed,
-		score,
-		hasBad,
-		hasExcluded,
-		livelyConcoction: generator.livelyConcoction,
-		alchemicalPrecursor: generator.alchemicalPrecursor
-	};
-};
+	/**
+	 * Calculates the recipes for a given seed, and calculates scoring information about the seed. The best possible
+	 * score for a seed would be 98 / 100. This would be water on both recipes (0 points), and two 1 point materials
+	 * shared between both recipes (1 point each, only counted once because they're reused). An example of this would
+	 * be "water" + "blood" + "oil" on both recipes. The worst possible score is 100 - (6 * 16), or 4 out of 100.
+	 *
+	 * @param seed The seed to calculate for
+	 */
+	protected calculateSeed(seed: number) {
+		const generator = new NoitaAlchemyGenerator(seed, false);
+
+		let score = 100;
+		let hasBadMat = false;
+		let hasExcluded = false;
+		let hasBadProbability = false;
+
+		// Materials are only counted against the score one each, so if they
+		// are re-used, don't re-count them. This keeps track of the list of
+		// materials we've already seen
+		const used: Set<Material> = new Set();
+		const materials = [
+			...generator.livelyConcoction.materials,
+			...generator.alchemicalPrecursor.materials
+		];
+
+		let stillRequired = this.apRequired.size + this.lcRequired.size;
+		const processMats = (recipe: Recipe, required: Set<Material>, minProb: number, maxProb: number) => {
+			if (recipe.probability < minProb || recipe.probability > maxProb) {
+				hasBadProbability = true;
+			}
+
+			for (let i = 0; i < 3; i++) {
+				const mat = recipe.materials[i];
+
+				if (required.has(mat)) {
+					stillRequired--;
+				}
+
+				if (used.has(mat)) {
+					continue;
+				}
+
+				used.add(mat);
+
+				const matScore = this.materialWeights[mat];
+
+				if (matScore > this.badMaterialThreshold) {
+					hasBadMat = true;
+				}
+
+				if (this.exclude.has(mat)) {
+					hasExcluded = true;
+				}
+
+				score -= matScore;
+			}
+		};
+
+		processMats(generator.livelyConcoction, this.lcRequired, this.minLcProbability, this.maxLcProbability);
+		processMats(generator.alchemicalPrecursor, this.apRequired, this.minApProbability, this.maxApProbability);
+
+		return {
+			seed,
+			score,
+			hasBadMat,
+			hasExcluded,
+			hasBadProbability,
+			hasIncluded: ! stillRequired,
+			livelyConcoction: generator.livelyConcoction,
+			alchemicalPrecursor: generator.alchemicalPrecursor
+		};
+	}
+}
 
 /**
  * Weighted preference scores for each material (lower score is better)
  */
-const materialPreference = {
+const defaultMaterialPreference: MaterialWeightMap = {
 	// Obviously, prefer the *really* easy stuff
 	'water': 0,
 	'blood': 1,
