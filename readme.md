@@ -16,22 +16,33 @@ console.log(generateRecipes(3342688));
 #### Generating Seeds
 
 ```typescript
-const { findSeed } = require('./build');
+const { SeedFinder } = require('./build');
 
-findSeed({
-	// Seed to start checking from
-	start: 1,
-
-	// How many seed to check before returning
-	attempts: 1000000,
-
+const seedFinder = new SeedFinder({
 	// Any specific materials to avoid
 	exclude: [ ],
 
+  // Any specific materials to require
+  requireMaterials: {
+    ap: [ ],
+    lc: [ ]
+  },
+
 	// The minimum score to require on a recipe to include it in the list (always somewhere
 	// between 4 and 98, with higher numbers being easier to achieve)
-	minScoreThreshold: 97
+  minScoreThreshold: 97
 });
+
+console.log();
+
+seedFinder.on('seed', (result) => {
+  console.log(`Seed ${result.seed} Score=${result.score}`);
+  console.log(`  Lively Concoction = ${result.livelyConcoction.materials.join(' + ')} // Probability ${result.livelyConcoction.probability}%`);
+  console.log(`  Alchemical Precursor = ${result.alchemicalPrecursor.materials.join(' + ')} // Probability ${result.alchemicalPrecursor.probability}%`);
+  console.log();
+});
+
+seedFinder.seek(1, 1000000);
 
 /**
 

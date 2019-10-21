@@ -10,13 +10,18 @@ h1, h2, h3, ul, small, p, span {
 
 h1 {
 	max-width: 1000px;
-	margin: 20px auto;
+	margin: 60px auto 20px auto;
+}
+
+h3 {
+	margin-bottom: 5px;
 }
 
 section#check-seed {
 	max-width: 800px;
 	height: 300px;
 	margin: 50px auto;
+	border-bottom: 1px #aaa solid;
 }
 
 section#check-seed .output {
@@ -27,6 +32,7 @@ section#check-seed .output {
 
 section#check-seed .output > div {
 	flex: 0 0 50%;
+	padding: 20px;
 }
 
 section#search-seeds {
@@ -36,4 +42,13 @@ section#search-seeds {
 
 section#search-seeds p {
 	text-align: center;
+}
+
+
+
+
+
+footer {
+	max-width: 1000px;
+	margin: 200px auto 20px;
 }
