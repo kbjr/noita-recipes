@@ -1,5 +1,47 @@
 
-export const liquidMaterials: string[] = [
+export type Material
+	= 'water'
+	| 'blood'
+	| 'oil'
+	| 'magic_liquid_charm'
+	| 'magic_liquid_berserk'
+	| 'magic_liquid_invisibility'
+	| 'alcohol'
+	| 'snow'
+	| 'sand'
+	| 'acid'
+	| 'poison'
+	| 'magic_liquid_polymorph'
+	| 'magic_liquid_random_polymorph'
+	| 'magic_liquid_teleportation'
+	| 'rotten_meat'
+	| 'water_ice'
+	| 'water_swamp'
+	| 'blood_worm'
+	| 'bone'
+	| 'lava'
+	| 'coal'
+	| 'gunpowder'
+	| 'fungi'
+	| 'gunpowder_explosive'
+	| 'urine'
+	| 'wax'
+	| 'gold'
+	| 'silver'
+	| 'copper'
+	| 'brass'
+	| 'diamond'
+	| 'swamp'
+	| 'mud'
+	| 'blood_fungi'
+	| 'radioactive_liquid'
+	| 'cement'
+	| 'soil'
+	| 'honey'
+	| 'slime'
+	| 'grass';
+
+export const liquidMaterials: Material[] = [
 	'water',
 	'water_ice',
 	'water_swamp',
@@ -24,7 +66,7 @@ export const liquidMaterials: string[] = [
 	'magic_liquid_invisibility'
 ];
 
-export const alchemyMaterials: string[] = [
+export const alchemyMaterials: Material[] = [
 	'sand',
 	'bone',
 	'soil',

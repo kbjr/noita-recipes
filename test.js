@@ -1,9 +1,30 @@
 
-const { generateRecipes } = require('./build');
+const { findSeed } = require('./build');
 
-const result = generateRecipes(3342688);
+findSeed({
+	start: 1,
+	attempts: 1000000,
+	// attempts: 0x7fffffff,
+	exclude: [ ],
+	minScoreThreshold: 97,
+	// badMaterialThreshold: 3
+});
 
-console.log(result);
+
+
+
+
+
+
+
+
+
+
+// const { generateRecipes } = require('./build');
+
+// const result = generateRecipes(3342688);
+
+// console.log(result);
 
 
 // ------------------------------------------------------------

@@ -1,10 +1,10 @@
 
 import { List } from './list';
 import { NumberGenerator } from './prng';
-import { alchemyMaterials, liquidMaterials } from './materials';
+import { alchemyMaterials, liquidMaterials, Material } from './materials';
 
 export interface Recipe {
-	materials: string[];
+	materials: Material[];
 	probability: number;
 }
 
@@ -30,7 +30,7 @@ export class NoitaAlchemyGenerator {
 		this.alchemicalPrecursor = this.getRandomRecipe();
 	}
 
-	public chooseRandomMaterials(target: List<string>, materialList: string[], iterations: number) {
+	public chooseRandomMaterials(target: List<Material>, materialList: Material[], iterations: number) {
 		for (let i = 0; i < iterations; i++) {
 			const rand = this.prng.next();
 			const pick = materialList[(rand * materialList.length) | 0];
@@ -45,7 +45,7 @@ export class NoitaAlchemyGenerator {
 	}
 
 	public getRandomRecipe() : Recipe {
-		const materials: List<string> = new List();
+		const materials: List<Material> = new List();
 
 		this.chooseRandomMaterials(materials, liquidMaterials, 3);
 		this.chooseRandomMaterials(materials, alchemyMaterials, 1);

@@ -1,6 +1,12 @@
 
 const intMax = 0x7fffffff;
 
+// We need genuine int32 behavior when mutliplying (ie. accurate int32 overflow
+// behavior), so we're going to cheat and use an int32 array to have JS actually
+// treat it as int32 values. Defining this up here and reusing it to avoid having
+// to reallocate tiny 2 byte buffers over and over.
+const a32 = new Int32Array(2);
+
 export class NumberGenerator {
 	constructor(public seed: number) {
 		this.next();
@@ -8,10 +14,6 @@ export class NumberGenerator {
 
 	public next() {
 		const intSeed = this.seed | 0;
-
-		// We need genuine int32 behavior when mutliplying, so we're going to cheat
-		// and use an int32 array to have JS actually treat it as int32 values
-		const a32 = new Int32Array(2);
 
 		// Calculate the first portion of the equation in int32:
 		//   a32[0] = (int) seed * 16807
