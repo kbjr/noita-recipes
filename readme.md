@@ -19,8 +19,8 @@ console.log(generateRecipes(3342688));
 const { SeedFinder } = require('./build');
 
 const seedFinder = new SeedFinder({
-	// Any specific materials to avoid
-	exclude: [ ],
+  // Any specific materials to avoid
+  exclude: [ ],
 
   // Any specific materials to require
   requireMaterials: {
@@ -28,8 +28,8 @@ const seedFinder = new SeedFinder({
     lc: [ ]
   },
 
-	// The minimum score to require on a recipe to include it in the list (always somewhere
-	// between 4 and 98, with higher numbers being easier to achieve)
+  // The minimum score to require on a recipe to include it in the list (always somewhere
+  // between 4 and 98, with higher numbers being easier to achieve)
   minScoreThreshold: 97
 });
 
