@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --build tsconfig.json"
+    "build": "tsc --build tsconfig.json",
+    "github-pages": "rollup -c"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^12.11.1",
+    "eventemitter3": "^4.0.0",
     "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "rollup": "^1.25.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.10.0"
   }
 }

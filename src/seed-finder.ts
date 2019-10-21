@@ -1,7 +1,7 @@
 
+import * as EventEmitter from 'eventemitter3';
 import { Material, MaterialWeightMap } from './materials';
 import { NoitaAlchemyGenerator, Recipe } from './generator';
-import { EventEmitter } from 'events';
 
 export interface SeedFinderOptions {
 	/** A list of materials to exclude (any seed using them is automatically disqualified) */
