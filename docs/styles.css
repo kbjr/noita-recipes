@@ -1,0 +1,39 @@
+
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+h1, h2, h3, ul, small, p, span {
+	color: #444;
+}
+
+h1 {
+	max-width: 1000px;
+	margin: 20px auto;
+}
+
+section#check-seed {
+	max-width: 800px;
+	height: 300px;
+	margin: 50px auto;
+}
+
+section#check-seed .output {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+section#check-seed .output > div {
+	flex: 0 0 50%;
+}
+
+section#search-seeds {
+	max-width: 800px;
+	margin: 50px auto;
+}
+
+section#search-seeds p {
+	text-align: center;
+}

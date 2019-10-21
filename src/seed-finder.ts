@@ -1,5 +1,5 @@
 
-import * as EventEmitter from 'eventemitter3';
+import { EventEmitter } from 'eventemitter3';
 import { Material, MaterialWeightMap } from './materials';
 import { NoitaAlchemyGenerator, Recipe } from './generator';
 
