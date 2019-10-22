@@ -39,6 +39,7 @@ const searchSeeds = document.querySelector('section#search-seeds');
 const searchSeedsMinScore = searchSeeds.querySelector('.options .score');
 const searchSeedsButton = searchSeeds.querySelector('.options button.search');
 const searchSeedsStatus = searchSeeds.querySelector('.options .status');
+const searchSeedsResults = searchSeeds.querySelector('.results');
 const searchSeedsMaterials = searchSeeds.querySelector('.materials');
 
 let canceled;
@@ -138,6 +139,7 @@ const getSearchQuery = () => {
 };
 
 const runSeedsSearch = async () => {
+	const startTime = Date.now();
 	const results = [ ];
 	const searchQuery = getSearchQuery();
 
@@ -181,10 +183,12 @@ const runSeedsSearch = async () => {
 		searched = `about ${start}`
 	}
 
+	const duration = (Date.now() - startTime) / 1000;
+
 	searching = false;
 	searchSeedsButton.innerHTML = 'Search';
-	setSearchStatus(`Done. Checked ${searched}; Found ${results.length} matches (see console)`);
-	console.log(results);
+	setSearchStatus(`Done. Checked ${searched} seeds; Found ${results.length} matches in ${duration} seconds`);
+	renderSearchResults(results);
 };
 
 const setSearchStatus = (message, isError = false) => {
@@ -198,3 +202,30 @@ const clearSearchStatus = () => {
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const renderSearchResults = (results) => {
+	if (! results.length) {
+		searchSeedsResults.innerHTML = '<h4>No Results Found</h4>';
+		return;
+	}
+
+	searchSeedsResults.innerHTML = `
+		<header>
+			<h4>Found ${results.length} Matching Seeds</h4>
+			<a class="clear">Clear Results</a>
+		</header>
+		<section>
+			${results.map((seed) => `
+				<div>
+					<h5>Seed: ${seed.seed}</h5>
+					<p>Lively Concoction: ${seed.livelyConcoction.materials.join(', ')} (Probability ${seed.livelyConcoction.probability}%)</p>
+					<p>Alchemical Precursor: ${seed.alchemicalPrecursor.materials.join(', ')} (Probability ${seed.alchemicalPrecursor.probability}%)</p>
+				</div>
+			`).join('')}
+		</section>
+	`;
+
+	searchSeedsResults.querySelector('header a.clear').addEventListener('click', () => {
+		searchSeedsResults.innerHTML = '';
+	});
+};

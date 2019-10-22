@@ -52,6 +52,42 @@ section#search-seeds > div {
 	margin-top: 40px;
 }
 
+section#search-seeds .results {
+	padding: 20px;
+	background: #eee;
+}
+
+section#search-seeds .results header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+section#search-seeds .results header h4 {
+	margin-top: 0;
+	flex: 1 0 50%;
+}
+
+section#search-seeds .results header a.clear {
+	color: #447;
+	cursor: pointer;
+}
+
+section#search-seeds .results section {
+	margin: 0;
+	padding: 0;
+}
+
+section#search-seeds .results section div h5 {
+	margin-bottom: 0;
+}
+
+section#search-seeds .results section div p {
+	margin: 0;
+	padding: 0 0 0 15px;
+	font-size: smaller;
+}
+
 section#search-seeds .options .status {
 	color: #666;
 	font-size: smaller;
