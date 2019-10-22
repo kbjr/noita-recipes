@@ -64,6 +64,9 @@ export class SeedFinder extends EventEmitter {
 	public seek(start: number, count: number) {
 		const end = start + count;
 
+		let canceled = false;
+		const cancel = () => canceled = true;
+
 		for (let seed = start; seed < end; seed++) {
 			const result = this.calculateSeed(seed);
 
@@ -71,7 +74,11 @@ export class SeedFinder extends EventEmitter {
 				continue;
 			}
 
-			this.emit('seed', result);
+			this.emit('seed', result, cancel);
+
+			if (canceled) {
+				break;
+			}
 		}
 
 		this.emit('done');
@@ -154,7 +161,7 @@ export class SeedFinder extends EventEmitter {
 /**
  * Weighted preference scores for each material (lower score is better)
  */
-const defaultMaterialPreference: MaterialWeightMap = {
+export const defaultMaterialPreference: MaterialWeightMap = {
 	// Obviously, prefer the *really* easy stuff
 	'water': 0,
 	'blood': 1,

@@ -17,6 +17,14 @@ h3 {
 	margin-bottom: 5px;
 }
 
+th, td {
+	padding: 3px;
+}
+
+tbody tr:hover {
+	background: #eee;
+}
+
 section#check-seed {
 	max-width: 800px;
 	height: 300px;
@@ -40,8 +48,13 @@ section#search-seeds {
 	margin: 50px auto;
 }
 
-section#search-seeds p {
-	text-align: center;
+section#search-seeds > div {
+	margin-top: 40px;
+}
+
+section#search-seeds .options .status {
+	color: #666;
+	font-size: smaller;
 }
 
 

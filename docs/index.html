@@ -15,8 +15,31 @@
 	</section>
 
 	<section id="search-seeds">
-		<h2>Search Seeds</h2>
-		<p>Coming Soon</p>
+		<h2>Search Seeds <small>(Under Construction)</small></h2>
+		
+		<div class="options">
+			<label>Minimum Score (4 - 98): </label>
+			<input class="score" type="number" min="0" max="100" value="4" />
+			<button class="search">Search</button>
+			<span class="status"></span>
+		</div>
+
+		<div class="materials">
+			<table>
+				<thead>
+					<tr>
+						<th>Material</th>
+						<th>Allowed?</th>
+						<th>Cost (0 - 16, lower means better)</th>
+						<th>LC Required</th>
+						<th>AP Required</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<div class="output"></div>
 	</section>
 
 	<footer>
