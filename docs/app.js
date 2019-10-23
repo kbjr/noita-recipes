@@ -248,7 +248,13 @@ const reactionsPage = () => {
 		if (value.material) {
 			const link = `./materials.html#mat-${value.material}`;
 			const material = data.materialsByName[value.material];
-			const display = `${material.displayName} (${material.name})`;
+			const display = material.displayName
+				? `${material.displayName} (${material.name})`
+				: material.uiName
+					? `${material.uiName} (${material.name})`
+					: material.parent
+						? `${data.materialsByName[material.parent].displayName} (${material.name})`
+						: `(${material.name})`;
 
 			return { link, display };
 		}
