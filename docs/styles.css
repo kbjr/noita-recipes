@@ -25,10 +25,13 @@ tbody tr:hover {
 	background: #eee;
 }
 
-section#check-seed {
+body > section {
 	max-width: 800px;
-	height: 300px;
 	margin: 50px auto;
+}
+
+section#check-seed {
+	height: 300px;
 	border-bottom: 1px #aaa solid;
 }
 
@@ -44,8 +47,7 @@ section#check-seed .output > div {
 }
 
 section#search-seeds {
-	max-width: 800px;
-	margin: 50px auto;
+	/**/
 }
 
 section#search-seeds > div {

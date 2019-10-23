@@ -1,6 +1,6 @@
 
 import { EventEmitter } from 'eventemitter3';
-import { Material, MaterialWeightMap } from './materials';
+import { Material, MaterialWeightMap } from './alchemy-materials';
 import { NoitaAlchemyGenerator, Recipe } from './generator';
 
 export interface SeedFinderOptions {

@@ -1,4 +1,5 @@
 
+import json from 'rollup-plugin-json';
 import typescript from 'rollup-plugin-typescript';
 
 export default {
@@ -12,6 +13,7 @@ export default {
   },
   external: [ 'eventemitter3' ],
   plugins: [
+    json(),
     typescript()
   ]
 }

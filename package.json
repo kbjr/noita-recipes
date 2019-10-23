@@ -15,7 +15,9 @@
     "typescript": "^3.6.4"
   },
   "devDependencies": {
+    "fast-xml-parser": "^3.13.0",
     "rollup": "^1.25.1",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-typescript": "^1.0.1",
     "tslib": "^1.10.0"
   }

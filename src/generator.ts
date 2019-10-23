@@ -1,7 +1,7 @@
 
 import { List } from './list';
 import { NumberGenerator } from './prng';
-import { alchemyMaterials, liquidMaterials, Material } from './materials';
+import { alchemyMaterials, liquidMaterials, Material } from './alchemy-materials';
 
 export interface Recipe {
 	materials: Material[];

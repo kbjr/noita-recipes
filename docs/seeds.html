@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<title>Noita Seed Explorer</title>
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="seed">
+	<h1>Noita Seed Explorer</h1>
+
+	<section id="check-seed">
+		<h2>Check Seed Recipe</h2>
+		<p>Check the LC and AP recipes for a specific seed</p>
+		<input type="text" />
+		<button>Check Seed</button>
+		<div class="output"></div>
+	</section>
+
+	<section id="search-seeds">
+		<h2>Search Seeds</h2>
+		<p>Search for seeds where the LC and AP recipes match specific requirements</p>
+		
+		<div class="options">
+			<label>Minimum Score (4 - 98): </label>
+			<input class="score" type="number" min="0" max="100" value="4" />
+			<button class="search">Search</button>
+			<span class="status"></span>
+		</div>
+
+		<div class="results"></div>
+
+		<div class="materials">
+			<table>
+				<thead>
+					<tr>
+						<th>Material</th>
+						<th>Allowed?</th>
+						<th>Cost (0 - 16, lower means better)</th>
+						<th>LC Required</th>
+						<th>AP Required</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<div class="output"></div>
+	</section>
+
+	<footer>
+		<small><a href="https://github.com/kbjr/noita-recipes">Source Code Available on GitHub</a></small>
+		<br />
+		<small>Copyright 2019 James Brumond. Free Use, Do Whatever</small>
+	</footer>
+
+	<script src="https://unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js"></script>
+	<script src="./bundle.js"></script>
+</body>
+</html>
