@@ -26,7 +26,8 @@ tbody tr:hover {
 }
 
 body > section {
-	max-width: 800px;
+	min-width: 800px;
+	max-width: 1200px;
 	margin: 50px auto;
 }
 
@@ -92,6 +93,14 @@ section#search-seeds .results section div p {
 
 section#search-seeds .options .status {
 	color: #666;
+	font-size: smaller;
+}
+
+
+
+
+
+#reactions-explorer td {
 	font-size: smaller;
 }
 

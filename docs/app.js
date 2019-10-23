@@ -236,12 +236,57 @@ const seedsPage = () => {
 
 // materials.html
 const materialsPage = () => {
-	// 
 };
 
 // reactions.html
 const reactionsPage = () => {
-	// 
+	const data = processMaterialsXML(materialsXML);
+
+	const reactionsTable = document.querySelector('#reactions-explorer table tbody');
+	const reactionsRows = [ ];
+	const inputOutput = (value) => {
+		if (value.material) {
+			const link = `./materials.html#mat-${value.material}`;
+			const material = data.materialsByName[value.material];
+			const display = `${material.displayName} (${material.name})`;
+
+			return { link, display };
+		}
+
+		if (value.tag) {
+			const link = `./materials.html#tag-${value.tag.slice(1, -1)}`;
+			const display = value.modifier
+				? `${value.tag}_${value.modifier}`
+				: value.tag;
+
+			return { link, display };
+		}
+	};
+
+	const inputOutputCell = (value) => {
+		if (! value) {
+			return '';
+		}
+
+		const processed = inputOutput(value);
+
+		return `<a href="${processed.link}">${processed.display}</a>`;
+	};
+
+	data.reactions.forEach((reaction) => {
+		reactionsRows.push(`
+			<tr>
+				<td>${inputOutputCell(reaction.input1)}</td>
+				<td>${inputOutputCell(reaction.input2)}</td>
+				<td>${inputOutputCell(reaction.input3)}</td>
+				<td>${inputOutputCell(reaction.output1)}</td>
+				<td>${inputOutputCell(reaction.output2)}</td>
+				<td>${reaction.probability}%</td>
+			</tr>
+		`);
+	});
+
+	reactionsTable.innerHTML = reactionsRows.join('');
 };
 
 const page = document.body.getAttribute('data-page');
