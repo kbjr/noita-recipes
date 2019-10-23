@@ -13229,8 +13229,20 @@
 		};
 	};
 
+	// materials.html
+	const materialsPage = () => {
+		console.log(processMaterialsXML(materialsXML));
+	};
+
 	// reactions.html
 	const reactionsPage = () => {
+
+		// 
+		// TODO:
+		//  ReqReactions are actually negative ("has to meet criteria or else", rather then
+		//  "if criteria is met, then").
+		// 
+
 		const data = processMaterialsXML(materialsXML);
 
 		const reactionsTable = document.querySelector('#reactions-explorer table tbody');
@@ -13288,6 +13300,7 @@
 			break;
 
 		case 'materials':
+			materialsPage();
 			break;
 
 		case 'reactions':
