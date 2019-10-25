@@ -1,7 +1,7 @@
 
 import { MaterialCell } from './cell';
-import { MaterialsXML, CellName, CellTag } from './xml-structure';
 import { Reaction, TagModifier, ReactionInputOutput } from './reaction';
+import { MaterialsXML, CellName, CellTag, CellDataNode, CellDataChildNode, ReactionNode, ReqReactionNode } from './xml-structure';
 
 export type MaterialsByName = {
 	[name in CellName]?: MaterialCell;
@@ -20,8 +20,22 @@ export type ReactionByTag = {
 };
 
 export const processMaterialsXML = (json: MaterialsXML) => {
-	const rawMaterials = [ ...json.Materials.CellData, ...json.Materials.CellDataChild  ];
+	const materials = processMaterials([
+		...json.Materials.CellData,
+		...json.Materials.CellDataChild 
+	]);
 
+	const reactions = processReactions(json.Materials.Reaction);
+	const reqReactions = processReactions(json.Materials.ReqReaction);
+
+	return {
+		materials,
+		reactions,
+		reqReactions
+	};
+};
+
+const processMaterials = (rawMaterials: (CellDataNode | CellDataChildNode)[]) => {
 	// Index of materials by their "name" attribute
 	const materialsByName: MaterialsByName = { };
 
@@ -45,8 +59,14 @@ export const processMaterialsXML = (json: MaterialsXML) => {
 		return material;
 	});
 
-	const rawReactions = [ ...json.Materials.Reaction, ...json.Materials.ReqReaction ];
+	return {
+		materials,
+		materialsByName,
+		materialsByTag,
+	};
+};
 
+const processReactions = <T extends ReactionNode | ReqReactionNode>(rawReactions: T[]) => {
 	// Index of reactions by the input materials
 	const reactionsByInputMaterial: ReactionByMaterial = { };
 
@@ -110,10 +130,7 @@ export const processMaterialsXML = (json: MaterialsXML) => {
 	});
 
 	return {
-		materials,
 		reactions,
-		materialsByName,
-		materialsByTag,
 		reactionsByInputMaterial,
 		reactionsByOutputMaterial,
 		reactionsByInputTag,

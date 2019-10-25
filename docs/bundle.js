@@ -12930,7 +12930,19 @@
 	};
 
 	const processMaterialsXML = (json) => {
-	    const rawMaterials = [...json.Materials.CellData, ...json.Materials.CellDataChild];
+	    const materials = processMaterials([
+	        ...json.Materials.CellData,
+	        ...json.Materials.CellDataChild
+	    ]);
+	    const reactions = processReactions(json.Materials.Reaction);
+	    const reqReactions = processReactions(json.Materials.ReqReaction);
+	    return {
+	        materials,
+	        reactions,
+	        reqReactions
+	    };
+	};
+	const processMaterials = (rawMaterials) => {
 	    // Index of materials by their "name" attribute
 	    const materialsByName = {};
 	    // Index of materials by the tags they possess
@@ -12947,7 +12959,13 @@
 	        });
 	        return material;
 	    });
-	    const rawReactions = [...json.Materials.Reaction, ...json.Materials.ReqReaction];
+	    return {
+	        materials,
+	        materialsByName,
+	        materialsByTag,
+	    };
+	};
+	const processReactions = (rawReactions) => {
 	    // Index of reactions by the input materials
 	    const reactionsByInputMaterial = {};
 	    // Index of reactions by the output materials
@@ -12994,10 +13012,7 @@
 	        return reaction;
 	    });
 	    return {
-	        materials,
 	        reactions,
-	        materialsByName,
-	        materialsByTag,
 	        reactionsByInputMaterial,
 	        reactionsByOutputMaterial,
 	        reactionsByInputTag,
@@ -13276,9 +13291,22 @@
 			return `<a href="${processed.link}">${processed.display}</a>`;
 		};
 
-		data.reactions.forEach((reaction) => {
+		data.reactions.reactions.forEach((reaction) => {
 			reactionsRows.push(`
 			<tr>
+				<td>${inputOutputCell(reaction.input1)}</td>
+				<td>${inputOutputCell(reaction.input2)}</td>
+				<td>${inputOutputCell(reaction.input3)}</td>
+				<td>${inputOutputCell(reaction.output1)}</td>
+				<td>${inputOutputCell(reaction.output2)}</td>
+				<td>${reaction.probability}%</td>
+			</tr>
+		`);
+		});
+
+		data.reqReactions.reactions.forEach((reaction) => {
+			reactionsRows.push(`
+			<tr class="req">
 				<td>${inputOutputCell(reaction.input1)}</td>
 				<td>${inputOutputCell(reaction.input2)}</td>
 				<td>${inputOutputCell(reaction.input3)}</td>

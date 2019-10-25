@@ -102,6 +102,14 @@ section#search-seeds .options .status {
 	max-width: 850px;
 }
 
+#reactions-explorer tr a {
+	color: #036;
+}
+
+#reactions-explorer tr.req a {
+	color: #a22;
+}
+
 #reactions-explorer td {
 	font-size: smaller;
 }

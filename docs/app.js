@@ -281,9 +281,22 @@ const reactionsPage = () => {
 		return `<a href="${processed.link}">${processed.display}</a>`;
 	};
 
-	data.reactions.forEach((reaction) => {
+	data.reactions.reactions.forEach((reaction) => {
 		reactionsRows.push(`
 			<tr>
+				<td>${inputOutputCell(reaction.input1)}</td>
+				<td>${inputOutputCell(reaction.input2)}</td>
+				<td>${inputOutputCell(reaction.input3)}</td>
+				<td>${inputOutputCell(reaction.output1)}</td>
+				<td>${inputOutputCell(reaction.output2)}</td>
+				<td>${reaction.probability}%</td>
+			</tr>
+		`);
+	});
+
+	data.reqReactions.reactions.forEach((reaction) => {
+		reactionsRows.push(`
+			<tr class="req">
 				<td>${inputOutputCell(reaction.input1)}</td>
 				<td>${inputOutputCell(reaction.input2)}</td>
 				<td>${inputOutputCell(reaction.input3)}</td>
