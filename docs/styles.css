@@ -145,6 +145,6 @@ section#search-seeds .options .status {
 
 
 footer {
-	max-width: 1000px;
+	max-width: var(--max-width);
 	margin: 200px auto 20px;
 }
