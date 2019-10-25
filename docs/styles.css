@@ -1,4 +1,8 @@
 
+:root {
+	--max-width: 1300px;
+}
+
 * {
 	box-sizing: border-box;
 	font-family: sans-serif;
@@ -9,7 +13,7 @@ h1, h2, h3, ul, small, p, span {
 }
 
 h1 {
-	max-width: 1000px;
+	max-width: var(--max-width);
 	margin: 60px auto 20px auto;
 }
 
@@ -26,7 +30,7 @@ tbody tr:hover {
 }
 
 body > section {
-	max-width: 800px;
+	max-width: var(--max-width);
 	margin: 50px auto;
 }
 
@@ -98,10 +102,6 @@ section#search-seeds .options .status {
 
 
 
-#reactions-explorer {
-	max-width: 850px;
-}
-
 #reactions-explorer tr a {
 	color: #036;
 }
@@ -113,6 +113,32 @@ section#search-seeds .options .status {
 #reactions-explorer td {
 	font-size: smaller;
 }
+
+
+
+
+#materials-explorer tr a {
+	color: #036;
+}
+
+#materials-explorer td {
+	font-size: smaller;
+}
+
+
+
+
+
+#tags-explorer tr a {
+	color: #036;
+}
+
+#tags-explorer td {
+	font-size: smaller;
+}
+
+
+
 
 
 

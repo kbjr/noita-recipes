@@ -13246,19 +13246,58 @@
 
 	// materials.html
 	const materialsPage = () => {
-		console.log(processMaterialsXML(materialsXML));
+		const data = processMaterialsXML(materialsXML);
+
+		console.log(data);
+
+		const materialsTable = document.querySelector('#materials-explorer table tbody');
+		const materialsRows = [ ];
+
+		data.materials.materials.forEach((material) => {
+			const tags = [ ...material.tags ].map((tag) => {
+				return `<a href="#tag-${tag.slice(1, -1)}">${tag}</a>`;
+			});
+
+			materialsRows.push(`
+			<tr id="mat-${material.name}"">
+				<td>${material.name}</td>
+				<td>${material.uiName}</td>
+				<td>${material.displayName || ''}</td>
+				<td>${material.parent || ''}</td>
+				<td>${tags.join(', ')}</td>
+			</tr>
+		`);
+		});
+
+		materialsTable.innerHTML = materialsRows.join('');
+
+		const tagsBox = document.querySelector('#tags-explorer > div.tags');
+		const tagsRows = [ ];
+
+		Object.keys(data.materials.materialsByTag).forEach((tag) => {
+			let content = `
+			<div id="tag-${tag.slice(1, -1)}">
+				<h3>${tag}</h3>
+				<ul class="materials">
+		`;
+
+			data.materials.materialsByTag[tag].forEach((material) => {
+				content += `<li>${material.name}</li>`;
+			});
+
+			content += '</ul></div>';
+
+			tagsRows.push(content);
+		});
+
+		tagsBox.innerHTML = tagsRows.join('');
 	};
 
 	// reactions.html
 	const reactionsPage = () => {
-
-		// 
-		// TODO:
-		//  ReqReactions are actually negative ("has to meet criteria or else", rather then
-		//  "if criteria is met, then").
-		// 
-
 		const data = processMaterialsXML(materialsXML);
+
+		console.log(data);
 
 		const reactionsTable = document.querySelector('#reactions-explorer table tbody');
 		const reactionsRows = [ ];
