@@ -91,7 +91,7 @@
 				attr: {
 					name: "sand_static",
 					ui_name: "$mat_sand_static",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -174,7 +174,7 @@
 				attr: {
 					name: "nest_static",
 					ui_name: "$mat_nest_static",
-					tags: "[static],[corrodible],[burnable],[alchemy]",
+					tags: "[static],[corrodible],[burnable],[alchemy],[solid]",
 					burnable: 1,
 					density: 10,
 					cell_type: "liquid",
@@ -202,7 +202,7 @@
 				attr: {
 					name: "bluefungi_static",
 					ui_name: "$mat_bluefungi_static",
-					tags: "[static],[corrodible],[burnable],[alchemy]",
+					tags: "[static],[corrodible],[burnable],[alchemy],[solid]",
 					burnable: 1,
 					density: 10,
 					cell_type: "liquid",
@@ -251,7 +251,7 @@
 				attr: {
 					name: "rock_static",
 					ui_name: "$mat_rock_static",
-					tags: "[static],[corrodible],[meltable_to_lava],[alchemy]",
+					tags: "[static],[corrodible],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -359,7 +359,7 @@
 				attr: {
 					name: "endslime_static",
 					ui_name: "$mat_endslime_static",
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					burnable: 0,
 					density: 4,
 					cell_type: "liquid",
@@ -425,7 +425,7 @@
 				attr: {
 					name: "slime_static",
 					ui_name: "$mat_slime_static",
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					burnable: 0,
 					density: 4,
 					cell_type: "liquid",
@@ -454,7 +454,7 @@
 				attr: {
 					name: "lavarock_static",
 					ui_name: "$mat_lavarock_static",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -490,7 +490,7 @@
 				attr: {
 					name: "meteorite_static",
 					ui_name: "$mat_meteorite_static",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -526,7 +526,7 @@
 				attr: {
 					name: "templerock_static",
 					ui_name: "$mat_templerock_static",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -564,7 +564,7 @@
 				attr: {
 					name: "steel_static",
 					ui_name: "$mat_steel_static",
-					tags: "[static],[corrodible],[rust],[alchemy],[meltable_metal]",
+					tags: "[static],[corrodible],[rust],[alchemy],[meltable_metal],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -657,7 +657,7 @@
 				attr: {
 					name: "rock_static_glow",
 					ui_name: "$mat_rock_static_glow",
-					tags: "[static],[corrodible],[meltable_to_lava],[alchemy]",
+					tags: "[static],[corrodible],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -680,7 +680,7 @@
 				attr: {
 					name: "snow_static",
 					ui_name: "$mat_snow_static",
-					tags: "[static],[corrodible],[frozen],[meltable_to_water],[alchemy]",
+					tags: "[static],[corrodible],[frozen],[meltable_to_water],[alchemy],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "liquid",
@@ -729,7 +729,7 @@
 				attr: {
 					name: "ice_static",
 					ui_name: "$mat_ice_static",
-					tags: "[static],[corrodible],[frozen],[meltable_to_water],[alchemy]",
+					tags: "[static],[corrodible],[frozen],[meltable_to_water],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -781,7 +781,7 @@
 				attr: {
 					name: "ice_acid_static",
 					ui_name: "$mat_ice_acid_static",
-					tags: "[static],[corrodible],[frozen],[meltable_to_acid],[alchemy]",
+					tags: "[static],[corrodible],[frozen],[meltable_to_acid],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -832,7 +832,7 @@
 				attr: {
 					name: "ice_cold_static",
 					ui_name: "$mat_ice_cold_static",
-					tags: "[static],[corrodible],[frozen],[meltable_to_cold],[alchemy]",
+					tags: "[static],[corrodible],[frozen],[meltable_to_cold],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -864,7 +864,7 @@
 				attr: {
 					name: "ice_radioactive_static",
 					ui_name: "$mat_ice_radioactive_static",
-					tags: "[static],[corrodible],[frozen],[meltable_to_radioactive],[alchemy]",
+					tags: "[static],[corrodible],[frozen],[meltable_to_radioactive],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -915,7 +915,7 @@
 				attr: {
 					name: "ice_poison_static",
 					ui_name: "$mat_ice_poison_static",
-					tags: "[static],[corrodible],[frozen],[meltable_to_poison],[alchemy]",
+					tags: "[static],[corrodible],[frozen],[meltable_to_poison],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -966,7 +966,7 @@
 				attr: {
 					name: "ice_meteor_static",
 					ui_name: "$mat_ice_meteor_static",
-					tags: "[static],[corrodible],[frozen],[meltable_to_lava],[alchemy]",
+					tags: "[static],[corrodible],[frozen],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -1017,7 +1017,7 @@
 				attr: {
 					name: "tubematerial",
 					ui_name: "$mat_tubematerial",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -1048,7 +1048,7 @@
 				attr: {
 					name: "glass_static",
 					ui_name: "$mat_glass_static",
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -1077,7 +1077,7 @@
 				attr: {
 					name: "waterrock",
 					ui_name: "$mat_waterrock",
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -1104,7 +1104,7 @@
 				attr: {
 					name: "ice_glass",
 					ui_name: "$mat_ice_glass",
-					tags: "[box2d],[static],[meltable_to_water],[alchemy]",
+					tags: "[box2d],[static],[meltable_to_water],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -1137,7 +1137,7 @@
 				attr: {
 					name: "ice_glass_b2",
 					ui_name: "$mat_ice_glass_b2",
-					tags: "[static],[meltable_to_water],[alchemy]",
+					tags: "[static],[meltable_to_water],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -1169,7 +1169,7 @@
 				attr: {
 					name: "glass_brittle",
 					ui_name: "$mat_glass_brittle",
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -1202,7 +1202,7 @@
 				attr: {
 					name: "snowrock_static",
 					ui_name: "$mat_snowrock_static",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -1282,7 +1282,7 @@
 				attr: {
 					name: "concrete_static",
 					ui_name: "$mat_concrete_static",
-					tags: "[static],[corrodible],[meltable_to_lava],[alchemy]",
+					tags: "[static],[corrodible],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -1313,7 +1313,7 @@
 				attr: {
 					name: "wood_static",
 					ui_name: "$mat_wood_static",
-					tags: "[corrodible],[burnable],[alchemy]",
+					tags: "[corrodible],[burnable],[alchemy],[solid]",
 					burnable: 1,
 					density: 11,
 					cell_type: "liquid",
@@ -1412,7 +1412,7 @@
 				attr: {
 					name: "cheese_static",
 					ui_name: "$mat_cheese_static",
-					tags: "[static],[corrodible],[meltable_to_lava],[alchemy]",
+					tags: "[static],[corrodible],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 5,
 					cell_type: "liquid",
@@ -2607,7 +2607,7 @@
 				attr: {
 					name: "gold_molten",
 					ui_name: "$mat_gold_molten",
-					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy],[gold]",
+					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy],[gold],[solid]",
 					burnable: 0,
 					density: 5,
 					cell_type: "liquid",
@@ -2634,7 +2634,7 @@
 				attr: {
 					name: "wax_molten",
 					ui_name: "$mat_wax_molten",
-					tags: "[liquid],[corrodible],[molten],[alchemy],[impure]",
+					tags: "[liquid],[corrodible],[molten],[alchemy],[impure],[solid]",
 					burnable: 0,
 					density: 2,
 					cell_type: "liquid",
@@ -2659,7 +2659,7 @@
 				attr: {
 					name: "silver_molten",
 					ui_name: "$mat_silver_molten",
-					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy]",
+					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 3,
 					cell_type: "liquid",
@@ -2685,7 +2685,7 @@
 				attr: {
 					name: "copper_molten",
 					ui_name: "$mat_copper_molten",
-					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy]",
+					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 3,
 					cell_type: "liquid",
@@ -2711,7 +2711,7 @@
 				attr: {
 					name: "brass_molten",
 					ui_name: "$mat_brass_molten",
-					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy]",
+					tags: "[liquid],[corrodible],[molten],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 3,
 					cell_type: "liquid",
@@ -2737,7 +2737,7 @@
 				attr: {
 					name: "glass_molten",
 					ui_name: "$mat_glass_molten",
-					tags: "[liquid],[molten],[meltable_to_lava],[alchemy]",
+					tags: "[liquid],[molten],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 3,
 					cell_type: "liquid",
@@ -2763,7 +2763,7 @@
 				attr: {
 					name: "glass_broken_molten",
 					ui_name: "$mat_glass_broken_molten",
-					tags: "[liquid],[molten],[meltable_to_lava],[alchemy]",
+					tags: "[liquid],[molten],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 3,
 					cell_type: "liquid",
@@ -2789,7 +2789,7 @@
 				attr: {
 					name: "steel_molten",
 					ui_name: "$mat_steel_molten",
-					tags: "[liquid],[molten],[meltable_to_lava],[alchemy]",
+					tags: "[liquid],[molten],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 2,
 					cell_type: "liquid",
@@ -2834,7 +2834,7 @@
 				attr: {
 					name: "cement",
 					ui_name: "$mat_cement",
-					tags: "[corrodible],[meltable_to_lava],[alchemy],[impure]",
+					tags: "[corrodible],[meltable_to_lava],[alchemy],[impure],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -2964,7 +2964,7 @@
 				attr: {
 					name: "soil",
 					ui_name: "$mat_soil",
-					tags: "[sand_ground],[corrodible],[grows_grass],[meltable_to_lava],[alchemy]",
+					tags: "[sand_ground],[corrodible],[grows_grass],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -2994,7 +2994,7 @@
 				attr: {
 					name: "sandstone",
 					ui_name: "$mat_sandstone",
-					tags: "[sand_ground],[corrodible],[meltable_to_lava],[alchemy]",
+					tags: "[sand_ground],[corrodible],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -3044,7 +3044,7 @@
 				attr: {
 					name: "fungisoil",
 					ui_name: "$mat_fungisoil",
-					tags: "[sand_ground],[corrodible],[grows_fungus],[meltable_to_lava],[alchemy]",
+					tags: "[sand_ground],[corrodible],[grows_fungus],[meltable_to_lava],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -3173,7 +3173,7 @@
 				attr: {
 					name: "root",
 					ui_name: "$mat_root",
-					tags: "[static],[sand_ground],[corrodible],[burnable],[alchemy]",
+					tags: "[static],[sand_ground],[corrodible],[burnable],[alchemy],[solid]",
 					burnable: 1,
 					density: 6,
 					cell_type: "liquid",
@@ -3377,7 +3377,7 @@
 				attr: {
 					name: "rotten_meat_radioactive",
 					ui_name: "$mat_rotten_meat_radioactive",
-					tags: "[sand_ground],[corrodible],[meltable_to_lava],[alchemy],[meat]",
+					tags: "[sand_ground],[corrodible],[meltable_to_lava],[alchemy],[meat],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -3436,7 +3436,7 @@
 				attr: {
 					name: "ice",
 					ui_name: "$mat_ice",
-					tags: "[sand_ground],[corrodible],[frozen],[meltable_to_water],[alchemy]",
+					tags: "[sand_ground],[corrodible],[frozen],[meltable_to_water],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -3514,7 +3514,7 @@
 				attr: {
 					name: "wax",
 					ui_name: "$mat_wax",
-					tags: "[burnable],[corrodible],[meltable],[alchemy]",
+					tags: "[burnable],[corrodible],[meltable],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -3539,7 +3539,7 @@
 				attr: {
 					name: "gold",
 					ui_name: "$mat_gold",
-					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy],[gold]",
+					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy],[gold],[solid]",
 					burnable: 0,
 					density: 9,
 					cell_type: "liquid",
@@ -3567,7 +3567,7 @@
 				attr: {
 					name: "silver",
 					ui_name: "$mat_silver",
-					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy]",
+					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "liquid",
@@ -3596,7 +3596,7 @@
 				attr: {
 					name: "copper",
 					ui_name: "$mat_copper",
-					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy]",
+					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "liquid",
@@ -3623,7 +3623,7 @@
 				attr: {
 					name: "brass",
 					ui_name: "$mat_brass",
-					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy]",
+					tags: "[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "liquid",
@@ -3650,7 +3650,7 @@
 				attr: {
 					name: "diamond",
 					ui_name: "$mat_diamond",
-					tags: "[sand_metal],[alchemy]",
+					tags: "[sand_metal],[alchemy],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "liquid",
@@ -3851,7 +3851,8 @@
 						damage: 0.2,
 						cell_explosion_power: 40,
 						cell_explosion_damage_required: 20,
-						cell_explosion_radius_min: 5,
+						cell_explosion_radius_min: 8,
+						explosion_sprite: "data/particles/explosion_012.xml",
 						ray_energy: 400000
 					}
 				},
@@ -3888,7 +3889,8 @@
 					attr: {
 						damage: 0.2,
 						cell_explosion_damage_required: 10,
-						cell_explosion_radius_min: 5,
+						ccell_explosion_radius_min: 8,
+						explosion_sprite: "data/particles/explosion_012.xml",
 						create_cell_probability: 100,
 						create_cell_material: "gunpowder_unstable",
 						ray_energy: 400000
@@ -3928,7 +3930,8 @@
 						damage: 0.2,
 						cell_explosion_power: 40,
 						cell_explosion_damage_required: 10,
-						cell_explosion_radius_min: 5,
+						cell_explosion_radius_min: 8,
+						explosion_sprite: "data/particles/explosion_012.xml",
 						ray_energy: 400000
 					}
 				},
@@ -3965,7 +3968,7 @@
 						damage: 0.2,
 						cell_explosion_power: 40,
 						cell_explosion_damage_required: 0,
-						cell_explosion_radius_min: 5,
+						cell_explosion_radius_min: 8,
 						create_cell_probability: 10,
 						create_cell_material: "slime_green",
 						ray_energy: 50000,
@@ -4475,7 +4478,7 @@
 				attr: {
 					name: "wood_player",
 					ui_name: "$mat_wood_player",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 1,
 					density: 6,
 					cell_type: "liquid",
@@ -4573,7 +4576,7 @@
 				attr: {
 					name: "wood_player_b2",
 					ui_name: "$mat_wood_player_b2",
-					tags: "[static],[box2d],[alchemy],[corrodible]",
+					tags: "[static],[box2d],[alchemy],[corrodible],[solid]",
 					burnable: 1,
 					density: 6,
 					cell_type: "solid",
@@ -4674,7 +4677,7 @@
 				attr: {
 					name: "wood",
 					ui_name: "$mat_wood",
-					tags: "[box2d],[corrodible],[alchemy],[burnable]",
+					tags: "[box2d],[corrodible],[alchemy],[burnable],[solid]",
 					burnable: 1,
 					density: 6,
 					cell_type: "solid",
@@ -4768,7 +4771,7 @@
 				attr: {
 					name: "wax_b2",
 					ui_name: "$mat_wax_b2",
-					tags: "[box2d],[alchemy]",
+					tags: "[box2d],[alchemy],[solid]",
 					burnable: 1,
 					density: 6,
 					cell_type: "solid",
@@ -4831,7 +4834,7 @@
 				attr: {
 					name: "wood_loose",
 					ui_name: "$mat_wood_loose",
-					tags: "[box2d],[corrodible],[alchemy]",
+					tags: "[box2d],[corrodible],[alchemy],[solid]",
 					burnable: 1,
 					density: 6,
 					cell_type: "solid",
@@ -4862,7 +4865,7 @@
 				attr: {
 					name: "rock_loose",
 					ui_name: "$mat_rock_loose",
-					tags: "[box2d],[corrodible],[alchemy]",
+					tags: "[box2d],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -4887,7 +4890,7 @@
 				attr: {
 					name: "ice_ceiling",
 					ui_name: "$mat_ice_ceiling",
-					tags: "[box2d],[corrodible],[alchemy]",
+					tags: "[box2d],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -4926,7 +4929,7 @@
 				attr: {
 					name: "brick",
 					ui_name: "$mat_brick",
-					tags: "[box2d],[corrodible],[alchemy]",
+					tags: "[box2d],[corrodible],[alchemy],[solid]",
 					burnable: 1,
 					density: 50,
 					cell_type: "solid",
@@ -4963,7 +4966,7 @@
 				attr: {
 					name: "concrete_collapsed",
 					ui_name: "$mat_concrete_collapsed",
-					tags: "[box2d],[corrodible],[alchemy]",
+					tags: "[box2d],[corrodible],[alchemy],[solid]",
 					burnable: 1,
 					density: 10,
 					cell_type: "solid",
@@ -5025,7 +5028,7 @@
 				attr: {
 					name: "tnt",
 					ui_name: "$mat_tnt",
-					tags: "[box2d],[corrodible],[burnable],[alchemy]",
+					tags: "[box2d],[corrodible],[burnable],[alchemy],[solid]",
 					burnable: 1,
 					density: 8,
 					cell_type: "solid",
@@ -5071,7 +5074,7 @@
 				attr: {
 					name: "tnt_static",
 					ui_name: "$mat_tnt",
-					tags: "[box2d],[corrodible],[burnable],[alchemy]",
+					tags: "[box2d],[corrodible],[burnable],[alchemy],[solid]",
 					burnable: 1,
 					density: 8,
 					cell_type: "solid",
@@ -5147,7 +5150,7 @@
 				attr: {
 					name: "meteorite",
 					ui_name: "$mat_meteorite",
-					tags: "[box2d],[alchemy]",
+					tags: "[box2d],[alchemy],[solid]",
 					burnable: 0,
 					fire_hp: -1,
 					density: 8,
@@ -5194,7 +5197,7 @@
 				attr: {
 					name: "meteorite_test",
 					ui_name: "$mat_meteorite",
-					tags: "[box2d],[alchemy]",
+					tags: "[box2d],[alchemy],[solid]",
 					burnable: 0,
 					fire_hp: -1,
 					density: 8,
@@ -5233,7 +5236,7 @@
 				attr: {
 					name: "meteorite_green",
 					ui_name: "$mat_meteorite_green",
-					tags: "[box2d],[alchemy]",
+					tags: "[box2d],[alchemy],[solid]",
 					burnable: 0,
 					fire_hp: -1,
 					density: 8,
@@ -5282,7 +5285,7 @@
 				attr: {
 					name: "steel",
 					ui_name: "$mat_steel",
-					tags: "[box2d],[rust_box2d],[alchemy],[meltable_metal]",
+					tags: "[box2d],[rust_box2d],[alchemy],[meltable_metal],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "solid",
@@ -5322,7 +5325,7 @@
 				attr: {
 					name: "steel_rust",
 					ui_name: "$mat_steel_rust",
-					tags: "[box2d],[alchemy],[meltable_metal]",
+					tags: "[box2d],[alchemy],[meltable_metal],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "solid",
@@ -5360,7 +5363,7 @@
 				attr: {
 					name: "metal_rust_rust",
 					ui_name: "$mat_metal_rust_rust",
-					tags: "[box2d],[alchemy],[corrodible]",
+					tags: "[box2d],[alchemy],[corrodible],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "solid",
@@ -5398,7 +5401,7 @@
 				attr: {
 					name: "metal_rust_barrel_rust",
 					ui_name: "$mat_metal_rust_barrel_rust",
-					tags: "[box2d],[alchemy],[corrodible]",
+					tags: "[box2d],[alchemy],[corrodible],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "solid",
@@ -5436,7 +5439,7 @@
 				attr: {
 					name: "plastic",
 					ui_name: "$mat_plastic",
-					tags: "[box2d],[corrodible],[meltable],[alchemy]",
+					tags: "[box2d],[corrodible],[meltable],[alchemy],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "solid",
@@ -5473,7 +5476,7 @@
 				attr: {
 					name: "aluminium",
 					ui_name: "$mat_aluminium",
-					tags: "[box2d],[corrodible],[rust_oxide],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[rust_oxide],[alchemy],[meltable_metal],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "solid",
@@ -5501,7 +5504,7 @@
 				attr: {
 					name: "rock_static_box2d",
 					ui_name: "$mat_rock_static_box2d",
-					tags: "[box2d],[static],[alchemy]",
+					tags: "[box2d],[static],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -5534,7 +5537,7 @@
 				attr: {
 					name: "rock_box2d",
 					ui_name: "$mat_rock_box2d",
-					tags: "[box2d],[static],[alchemy]",
+					tags: "[box2d],[static],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -5675,7 +5678,7 @@
 				attr: {
 					name: "aluminium_oxide",
 					ui_name: "$mat_aluminium_oxide",
-					tags: "[box2d],[corrodible],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[alchemy],[meltable_metal],[solid]",
 					burnable: 0,
 					density: 8,
 					cell_type: "solid",
@@ -5703,7 +5706,7 @@
 				attr: {
 					name: "meat",
 					ui_name: "$mat_meat",
-					tags: "[box2d],[corrodible],[meltable_to_lava],[alchemy],[meat]",
+					tags: "[box2d],[corrodible],[meltable_to_lava],[alchemy],[meat],[solid]",
 					burnable: 1,
 					density: 3,
 					solid_friction: 1,
@@ -5744,7 +5747,7 @@
 				attr: {
 					name: "meat_slime",
 					ui_name: "$mat_meat_slime",
-					tags: "[box2d],[corrodible],[meltable_to_lava],[alchemy],[meat]",
+					tags: "[box2d],[corrodible],[meltable_to_lava],[alchemy],[meat],[solid]",
 					burnable: 1,
 					density: 3,
 					cell_type: "solid",
@@ -5900,7 +5903,7 @@
 				attr: {
 					name: "ice_b2",
 					ui_name: "$mat_ice_b2",
-					tags: "[box2d],[alchemy]",
+					tags: "[box2d],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -5936,7 +5939,7 @@
 				attr: {
 					name: "glass",
 					ui_name: "$mat_glass",
-					tags: "[static],[meltable_metal],[alchemy]",
+					tags: "[static],[meltable_metal],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -5974,7 +5977,7 @@
 				attr: {
 					name: "glass_broken",
 					ui_name: "$mat_glass",
-					tags: "[sand_other],[meltable_metal],[alchemy]",
+					tags: "[sand_other],[meltable_metal],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "liquid",
@@ -6000,7 +6003,7 @@
 				attr: {
 					name: "neon_tube_purple",
 					ui_name: "$mat_neon_tube_purple",
-					tags: "[static],[corrodible],[box2d],[alchemy]",
+					tags: "[static],[corrodible],[box2d],[alchemy],[solid]",
 					burnable: 0,
 					density: 6,
 					cell_type: "solid",
@@ -6053,7 +6056,7 @@
 				attr: {
 					name: "snow_b2",
 					ui_name: "$mat_snow_b2",
-					tags: "[box2d],[corrodible],[alchemy],[meltable_to_water]",
+					tags: "[box2d],[corrodible],[alchemy],[meltable_to_water],[solid]",
 					burnable: 0,
 					density: 50,
 					cell_type: "solid",
@@ -6408,7 +6411,7 @@
 				attr: {
 					_parent: "rock_static",
 					_inherit_reactions: 1,
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					name: "rock_static_intro",
 					ui_name: "$mat_rock_static_intro",
 					wang_color: "ff0a3344",
@@ -6482,7 +6485,101 @@
 				attr: {
 					_parent: "rock_static",
 					_inherit_reactions: 1,
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
+					name: "rock_static_cursed",
+					ui_name: "$mat_rock_static_cursed",
+					wang_color: "ff3f4d3e",
+					hp: 160000,
+					durability: 14,
+					audio_physics_material_event: "rock",
+					audio_physics_material_wall: "rock",
+					audio_physics_material_solid: "rock"
+				},
+				Graphics: {
+					attr: {
+						texture_file: "data/materials_gfx/rock_cursed.png",
+						color: "ff313b36",
+						pixel_all_around: "ff313b36"
+					},
+					Edge: {
+						EdgeGraphics: {
+							attr: {
+								color: "ff233112",
+								overwrite: 0,
+								percent: 0.3,
+								require_same_material: 0,
+								require_same_material_type: 1,
+								type: "EVERYWHERE",
+								z: 1
+							},
+							Images: {
+								Image: [
+									{
+										attr: {
+											allow_random_rotation: 1,
+											filename: "data/materials_gfx/edge_files/edge_rock_cursed_1.png"
+										}
+									},
+									{
+										attr: {
+											allow_random_rotation: 1,
+											filename: "data/materials_gfx/edge_files/edge_rock_cursed_2.png"
+										}
+									},
+									{
+										attr: {
+											allow_random_rotation: 1,
+											filename: "data/materials_gfx/edge_files/edge_rock_cursed_3.png"
+										}
+									},
+									{
+										attr: {
+											allow_random_rotation: 1,
+											filename: "data/materials_gfx/edge_files/edge_rock_cursed_4.png"
+										}
+									},
+									{
+										attr: {
+											allow_random_rotation: 1,
+											filename: "data/materials_gfx/edge_files/edge_rock_cursed_5.png"
+										}
+									},
+									{
+										attr: {
+											allow_random_rotation: 1,
+											filename: "data/materials_gfx/edge_files/edge_rock_cursed_6.png"
+										}
+									}
+								]
+							}
+						}
+					}
+				},
+				ParticleEffect: {
+					attr: {
+						"vel.y": -13.14,
+						"vel_random.min_x": -17.71,
+						"vel_random.max_x": 17.71,
+						"vel_random.min_y": -17.18,
+						"vel_random.max_y": -2.8,
+						"lifetime.min": 0.9,
+						"lifetime.max": 1.6,
+						"gravity.y": 60,
+						render_on_grid: 1,
+						airflow_force: 0.5314,
+						airflow_scale: 0.1371,
+						friction: 0.0002,
+						probability: 0.0145,
+						"count.min": 0,
+						"count.max": 1
+					}
+				}
+			},
+			{
+				attr: {
+					_parent: "rock_static",
+					_inherit_reactions: 1,
+					tags: "[static],[alchemy],[solid]",
 					name: "rock_hard",
 					ui_name: "$mat_rock_hard",
 					wang_color: "ff003344",
@@ -6555,7 +6652,7 @@
 				attr: {
 					_parent: "rock_static",
 					_inherit_reactions: 1,
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					name: "wood_tree",
 					ui_name: "$mat_wood",
 					wang_color: "ff005345",
@@ -6575,7 +6672,7 @@
 				attr: {
 					_parent: "rock_static",
 					_inherit_reactions: 1,
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					name: "rock_static_noedge",
 					ui_name: "$mat_rock_static_noedge",
 					wang_color: "ff003345",
@@ -6595,7 +6692,7 @@
 				attr: {
 					_parent: "rock_static",
 					_inherit_reactions: 1,
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					name: "rock_hard_border",
 					ui_name: "$mat_rock_hard_border",
 					wang_color: "ff104344",
@@ -6868,7 +6965,7 @@
 				attr: {
 					_parent: "rock_static",
 					_inherit_reactions: 1,
-					tags: "[static],[alchemy],[meltable_to_lava],[corrodible]",
+					tags: "[static],[alchemy],[meltable_to_lava],[corrodible],[solid]",
 					name: "rock_static_radioactive",
 					ui_name: "$mat_rock_static_radioactive",
 					wang_color: "ff00f344",
@@ -6960,7 +7057,7 @@
 				attr: {
 					_parent: "rock_static",
 					_inherit_reactions: 1,
-					tags: "[static],[alchemy],[meltable_to_lava],[corrodible]",
+					tags: "[static],[alchemy],[meltable_to_lava],[corrodible],[solid]",
 					name: "rock_static_poison",
 					ui_name: "$mat_rock_static_poison",
 					wang_color: "ff00fa44",
@@ -7052,7 +7149,7 @@
 				attr: {
 					_parent: "the_end",
 					_inherit_reactions: 1,
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					name: "skullrock",
 					ui_name: "$mat_skullrock",
 					wang_color: "ff00a344",
@@ -7395,7 +7492,7 @@
 					_inherit_reactions: 1,
 					name: "templerock_soft",
 					ui_name: "$mat_templerock_static",
-					tags: "[static],[corrodible],[alchemy]",
+					tags: "[static],[corrodible],[alchemy],[solid]",
 					burnable: 0,
 					density: 10,
 					cell_type: "liquid",
@@ -7908,7 +8005,7 @@
 					_inherit_reactions: 1,
 					name: "steel_static_strong",
 					ui_name: "$mat_steel_static_strong",
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					wang_color: "ff404a41"
 				},
 				Graphics: {
@@ -7986,7 +8083,7 @@
 					_inherit_reactions: 1,
 					name: "steel_static_unmeltable",
 					ui_name: "$mat_steel_static_unmeltable",
-					tags: "[static],[alchemy],[corrodible]",
+					tags: "[static],[alchemy],[corrodible],[solid]",
 					wang_color: "ff404F50"
 				},
 				Graphics: {
@@ -8062,7 +8159,7 @@
 				attr: {
 					_parent: "ice_static",
 					_inherit_reactions: 0,
-					tags: "[static],[alchemy]",
+					tags: "[static],[alchemy],[solid]",
 					name: "rock_static_intro_breakable",
 					ui_name: "$mat_rock_static_intro_breakable",
 					wang_color: "ff0a3355",
@@ -8139,7 +8236,7 @@
 				attr: {
 					_parent: "ice_static",
 					_inherit_reactions: 0,
-					tags: "[static],[alchemy],[meltable_to_blood]",
+					tags: "[static],[alchemy],[meltable_to_blood],[solid]",
 					name: "ice_blood_static",
 					ui_name: "$mat_ice_blood_static",
 					wang_color: "ffcb7070",
@@ -8162,7 +8259,7 @@
 				attr: {
 					_parent: "ice_static",
 					_inherit_reactions: 0,
-					tags: "[static],[alchemy],[meltable_to_slime]",
+					tags: "[static],[alchemy],[meltable_to_slime],[solid]",
 					name: "ice_slime_static",
 					ui_name: "$mat_ice_slime_static",
 					wang_color: "ffcba270",
@@ -8197,7 +8294,7 @@
 			{
 				attr: {
 					_parent: "ice_glass",
-					tags: "[static],[meltable_to_acid],[alchemy]",
+					tags: "[static],[meltable_to_acid],[alchemy],[solid]",
 					_inherit_reactions: 1,
 					solid_friction: 0.05,
 					name: "ice_acid_glass",
@@ -8231,7 +8328,7 @@
 			{
 				attr: {
 					_parent: "ice_glass",
-					tags: "[static],[meltable_to_cold],[alchemy]",
+					tags: "[static],[meltable_to_cold],[alchemy],[solid]",
 					_inherit_reactions: 1,
 					solid_friction: 0.05,
 					name: "ice_cold_glass",
@@ -8264,7 +8361,7 @@
 			{
 				attr: {
 					_parent: "ice_glass",
-					tags: "[static],[meltable_to_radioactive],[alchemy]",
+					tags: "[static],[meltable_to_radioactive],[alchemy],[solid]",
 					_inherit_reactions: 1,
 					solid_friction: 0.05,
 					name: "ice_radioactive_glass",
@@ -8298,7 +8395,7 @@
 			{
 				attr: {
 					_parent: "ice_glass",
-					tags: "[static],[meltable_to_poison],[alchemy]",
+					tags: "[static],[meltable_to_poison],[alchemy],[solid]",
 					_inherit_reactions: 1,
 					solid_friction: 0.05,
 					name: "ice_poison_glass",
@@ -8332,7 +8429,7 @@
 			{
 				attr: {
 					_parent: "ice_glass",
-					tags: "[static],[meltable_to_blood],[alchemy]",
+					tags: "[static],[meltable_to_blood],[alchemy],[solid]",
 					_inherit_reactions: 1,
 					solid_friction: 0.05,
 					name: "ice_blood_glass",
@@ -8347,7 +8444,7 @@
 			{
 				attr: {
 					_parent: "ice_glass",
-					tags: "[static],[meltable_to_slime],[alchemy]",
+					tags: "[static],[meltable_to_slime],[alchemy],[solid]",
 					_inherit_reactions: 1,
 					solid_friction: 0.05,
 					name: "ice_slime_glass",
@@ -8406,7 +8503,7 @@
 				attr: {
 					_parent: "wood_static",
 					_inherit_reactions: 1,
-					tags: "[corrodible],[alchemy],[gold]",
+					tags: "[corrodible],[alchemy],[gold],[solid]",
 					name: "gold_static",
 					ui_name: "$mat_gold_static",
 					solid_friction: 0.5,
@@ -8426,7 +8523,7 @@
 				attr: {
 					_parent: "wood_static",
 					_inherit_reactions: 1,
-					tags: "[corrodible],[alchemy],[gold]",
+					tags: "[corrodible],[alchemy],[gold],[solid]",
 					name: "gold_static_dark",
 					ui_name: "$mat_gold_static_dark",
 					solid_friction: 0.5,
@@ -10097,7 +10194,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d],[corrodible],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[alchemy],[meltable_metal],[solid]",
 					name: "aluminium_robot",
 					ui_name: "$mat_aluminium",
 					wang_color: "ff3c2d3c",
@@ -10118,7 +10215,7 @@
 					_inherit_reactions: 1,
 					name: "metal_prop",
 					ui_name: "$mat_metal_prop",
-					tags: "[box2d],[corrodible],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[alchemy],[meltable_metal],[solid]",
 					platform_type: 1,
 					solid_static_type: 0,
 					solid_collide_with_self: 1,
@@ -10140,7 +10237,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d],[corrodible],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[alchemy],[meltable_metal],[solid]",
 					name: "metal",
 					ui_name: "$mat_metal",
 					platform_type: 1,
@@ -10160,7 +10257,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d]",
+					tags: "[box2d],[solid]",
 					name: "rock_box2d",
 					ui_name: "$mat_rock_box2d",
 					platform_type: 1,
@@ -10182,7 +10279,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d]",
+					tags: "[box2d],[solid]",
 					name: "rock_box2d_hard",
 					ui_name: "$mat_rock_box2d_hard",
 					platform_type: 1,
@@ -10205,7 +10302,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d]",
+					tags: "[box2d],[solid]",
 					name: "rock_box2d_nohit",
 					ui_name: "$mat_rock_box2d_nohit",
 					electrical_conductivity: 0,
@@ -10225,7 +10322,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d]",
+					tags: "[box2d],[solid]",
 					name: "rock_box2d_nohit_hard",
 					ui_name: "$mat_rock_box2d_nohit_hard",
 					electrical_conductivity: 0,
@@ -10427,7 +10524,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d],[corrodible],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[alchemy],[meltable_metal],[solid]",
 					name: "metal_nohit",
 					ui_name: "$mat_metal_nohit",
 					hp: 40000,
@@ -10446,7 +10543,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d],[corrodible],[rust_box2d],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[rust_box2d],[alchemy],[meltable_metal],[solid]",
 					name: "metal_rust",
 					ui_name: "$mat_metal_rust",
 					platform_type: 1,
@@ -10467,7 +10564,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d],[corrodible],[rust_box2d],[alchemy],[meltable_metal]",
+					tags: "[box2d],[corrodible],[rust_box2d],[alchemy],[meltable_metal],[solid]",
 					name: "metal_rust_barrel",
 					ui_name: "$mat_metal_rust_barrel",
 					platform_type: 1,
@@ -10487,7 +10584,7 @@
 				attr: {
 					_parent: "aluminium",
 					_inherit_reactions: 1,
-					tags: "[box2d],[corrodible],[alchemy],[meltable_to_lava]",
+					tags: "[box2d],[corrodible],[alchemy],[meltable_to_lava],[solid]",
 					name: "bone_box2d",
 					ui_name: "$mat_bone_box2d",
 					solid_break_to_type: "bone",
@@ -10507,7 +10604,7 @@
 				attr: {
 					name: "gold_b2",
 					ui_name: "$mat_gold_b2",
-					tags: "[box2d],[gold],[alchemy]",
+					tags: "[box2d],[gold],[alchemy],[solid]",
 					_parent: "crystal",
 					_inherit_reactions: 1,
 					wang_color: "fffefae4",
