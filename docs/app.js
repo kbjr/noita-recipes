@@ -49,8 +49,8 @@ const seedsPage = () => {
 	let searching;
 	const maxSeed = 0x7fffffff;
 	const desiredResults = 200;
-	const attemptsPerCycle = 10000;
-	const threadPausePerCycle = 100;
+	const attemptsPerCycle = 200000;
+	const threadPausePerCycle = 20;
 
 	allMaterials.forEach((material) => {
 		allowed.add(material);
