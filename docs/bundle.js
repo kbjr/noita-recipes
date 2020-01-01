@@ -1889,6 +1889,184 @@
 			},
 			{
 				attr: {
+					name: "material_confusion",
+					ui_name: "$mat_confusion",
+					tags: "[liquid],[water],[magic_liquid],[impure]",
+					burnable: 0,
+					density: 5,
+					cell_type: "liquid",
+					wang_color: "80ff0204",
+					generates_smoke: 0,
+					liquid_gravity: 0.8,
+					liquid_sand: 0,
+					gfx_glow: 150,
+					on_fire: 0,
+					requires_oxygen: 0,
+					liquid_stains: 1,
+					liquid_sprite_stain_shaken_drop_chance: 5,
+					status_effects: "CONFUSION"
+				},
+				Graphics: {
+					attr: {
+						texture_file: "data/materials_gfx/confusion.png",
+						color: "88E8BD5C"
+					}
+				},
+				ParticleEffect: {
+					attr: {
+						"vel.y": 2.86,
+						"vel_random.min_x": -6,
+						"vel_random.max_x": 6,
+						"vel_random.min_y": -2.9,
+						"vel_random.max_y": 3.2,
+						render_on_grid: 1,
+						probability: 0.6,
+						"count.min": 0,
+						"count.max": 1
+					}
+				}
+			},
+			{
+				attr: {
+					name: "magic_liquid_movement_faster",
+					ui_name: "$mat_magic_liquid_movement_faster",
+					tags: "[liquid],[water],[magic_liquid],[impure]",
+					burnable: 0,
+					density: 5,
+					cell_type: "liquid",
+					wang_color: "80c1dba4",
+					generates_smoke: 0,
+					liquid_gravity: 0.8,
+					liquid_sand: 0,
+					gfx_glow: 150,
+					on_fire: 0,
+					requires_oxygen: 0,
+					liquid_stains: 1,
+					liquid_sprite_stain_shaken_drop_chance: 5,
+					status_effects: "MOVEMENT_FASTER_2X"
+				},
+				ParticleEffect: {
+					attr: {
+						"vel.y": 17.14,
+						"vel_random.min_y": -100,
+						"vel_random.max_y": 25.71,
+						"lifetime.min": 0,
+						"gravity.y": -8.57,
+						render_on_grid: 1,
+						draw_as_long: 1,
+						friction: -3.429,
+						probability: 0.0518
+					}
+				}
+			},
+			{
+				attr: {
+					name: "magic_liquid_worm_attractor",
+					ui_name: "$mat_magic_liquid_worm_attractor",
+					tags: "[liquid],[water],[magic_liquid],[impure]",
+					burnable: 0,
+					density: 5,
+					cell_type: "liquid",
+					wang_color: 80687478,
+					generates_smoke: 0,
+					liquid_gravity: 0.8,
+					liquid_sand: 0,
+					gfx_glow: 150,
+					on_fire: 0,
+					requires_oxygen: 0,
+					liquid_stains: 1,
+					liquid_sprite_stain_shaken_drop_chance: 5,
+					status_effects: "WORM_ATTRACTOR"
+				},
+				ParticleEffect: {
+					attr: {
+						"vel.y": 17.14,
+						"vel_random.min_y": -100,
+						"vel_random.max_y": 25.71,
+						"lifetime.min": 0,
+						"gravity.y": -8.57,
+						render_on_grid: 1,
+						draw_as_long: 1,
+						friction: -3.429,
+						probability: 0.0518
+					}
+				}
+			},
+			{
+				attr: {
+					name: "magic_liquid_protection_all",
+					ui_name: "$mat_magic_liquid_protection_all",
+					tags: "[liquid],[water],[magic_liquid],[impure]",
+					burnable: 0,
+					density: 5,
+					cell_type: "liquid",
+					wang_color: "80df9828",
+					generates_smoke: 0,
+					liquid_gravity: 0.8,
+					liquid_sand: 0,
+					gfx_glow: 150,
+					on_fire: 0,
+					requires_oxygen: 0,
+					liquid_stains: 1,
+					liquid_sprite_stain_shaken_drop_chance: 5,
+					status_effects: "PROTECTION_ALL"
+				},
+				ParticleEffect: {
+					attr: {
+						"vel.y": 17.14,
+						"vel_random.min_y": -100,
+						"vel_random.max_y": 25.71,
+						"lifetime.min": 0,
+						"gravity.y": -8.57,
+						render_on_grid: 1,
+						draw_as_long: 1,
+						friction: -3.429,
+						probability: 0.0518
+					}
+				}
+			},
+			{
+				attr: {
+					name: "magic_liquid_mana_regeneration",
+					ui_name: "$mat_magic_liquid_mana_regeneration",
+					tags: "[liquid],[water],[magic_liquid],[impure]",
+					burnable: 0,
+					density: 5,
+					cell_type: "liquid",
+					wang_color: "800bffe5",
+					generates_smoke: 0,
+					liquid_gravity: 0.8,
+					liquid_sand: 0,
+					gfx_glow: 130,
+					on_fire: 0,
+					requires_oxygen: 0,
+					liquid_stains: 1,
+					liquid_sprite_stain_shaken_drop_chance: 4,
+					status_effects: "MANA_REGENERATION"
+				},
+				ParticleEffect: {
+					attr: {
+						"vel.y": 0,
+						"vel_random.min_x": -17.43,
+						"vel_random.max_x": 17.43,
+						"vel_random.min_y": -25.75,
+						"vel_random.max_y": 20,
+						"lifetime.min": 5,
+						"lifetime.max": 10,
+						"gravity.y": 0,
+						render_on_grid: 1,
+						draw_as_long: 1,
+						airflow_force: 0.474,
+						airflow_scale: 0.1371,
+						friction: 3.714,
+						probability: 0.0857,
+						"count.min": 0,
+						"count.max": 1
+					}
+				}
+			},
+			{
+				attr: {
 					name: "magic_liquid_teleportation",
 					ui_name: "$mat_magic_liquid_teleportation",
 					tags: "[liquid],[water],[magic_liquid],[impure]",
@@ -3121,6 +3299,35 @@
 					attr: {
 						texture_file: "data/materials_gfx/slime.png",
 						color: "88b8376d"
+					}
+				}
+			},
+			{
+				attr: {
+					name: "slush",
+					ui_name: "$mat_slush",
+					tags: "[corrodible],[meltable_to_water],[alchemy],[snow]",
+					burnable: 0,
+					density: 3,
+					cell_type: "liquid",
+					wang_color: "90b5ceff",
+					generates_smoke: 0,
+					liquid_gravity: 0.5,
+					liquid_sand: 0,
+					liquid_sticks_to_ceiling: 10,
+					liquid_slime: 1,
+					liquid_stains: 2,
+					stickyness: 0.9,
+					solid_friction: 0.6,
+					on_fire: 0,
+					requires_oxygen: 0,
+					temperature_of_fire: 10,
+					status_effects: "WET"
+				},
+				Graphics: {
+					attr: {
+						texture_file: "data/materials_gfx/slush.png",
+						color: "90b5ceff"
 					}
 				}
 			},
@@ -7952,6 +8159,88 @@
 				attr: {
 					_parent: "steel_static",
 					_inherit_reactions: 1,
+					name: "steelfrost_static",
+					ui_name: "$mat_steelfrost_static",
+					wang_color: "ff787B34",
+					wang_noise_percent: 0,
+					wang_curvature: 0.5,
+					solid_friction: 0.9,
+					electrical_conductivity: 1,
+					durability: 10
+				},
+				Graphics: {
+					attr: {
+						texture_file: "data/materials_gfx/steelpanelfrost.png",
+						color: "ff596f6e"
+					},
+					Edge: {
+						EdgeGraphics: {
+							attr: {
+								color: "ff596f6e",
+								overwrite: 0,
+								percent: 1,
+								require_same_material: 0,
+								require_same_material_type: 1,
+								type: "CARDINAL_DIRECTIONS",
+								z: 1
+							},
+							Images: {
+								Image: [
+									{
+										attr: {
+											do_only_horizontal_stripe: 1,
+											do_only_vertical_stripe: 0,
+											filename: "data/materials_gfx/edge_files/edge_steelfrost_hor.png",
+											min_angle: 45,
+											max_angle: 135
+										}
+									},
+									{
+										attr: {
+											do_only_horizontal_stripe: 0,
+											do_only_vertical_stripe: 1,
+											filename: "data/materials_gfx/edge_files/edge_steelfrost_ver.png",
+											min_angle: 135,
+											max_angle: 225
+										}
+									},
+									{
+										attr: {
+											do_only_horizontal_stripe: 1,
+											do_only_vertical_stripe: 0,
+											filename: "data/materials_gfx/edge_files/edge_steelfrost_hor.png",
+											min_angle: 225,
+											max_angle: 315
+										}
+									},
+									{
+										attr: {
+											do_only_horizontal_stripe: 0,
+											do_only_vertical_stripe: 1,
+											filename: "data/materials_gfx/edge_files/edge_steelfrost_ver.png",
+											min_angle: 315,
+											max_angle: 360
+										}
+									},
+									{
+										attr: {
+											do_only_horizontal_stripe: 0,
+											do_only_vertical_stripe: 1,
+											filename: "data/materials_gfx/edge_files/edge_steelfrost_ver.png",
+											min_angle: 0,
+											max_angle: 45
+										}
+									}
+								]
+							}
+						}
+					}
+				}
+			},
+			{
+				attr: {
+					_parent: "steel_static",
+					_inherit_reactions: 1,
 					name: "steelmoss_slanted",
 					ui_name: "$mat_steelmoss_slanted",
 					wang_color: "ff787A85",
@@ -8915,6 +9204,7 @@
 					_inherit_reactions: 0,
 					tags: "[liquid],[corrodible],[soluble],[impure]",
 					name: "poison",
+					ui_name: "$mat_poison",
 					wang_color: "44B43CFF",
 					danger_poison: 1,
 					danger_radioactive: 0,
@@ -11810,6 +12100,33 @@
 					output_cell1: "blood_cold_vapour",
 					output_cell2: "rock_hard",
 					blob_radius2: 3
+				}
+			},
+			{
+				attr: {
+					probability: 100,
+					input_cell1: "steelfrost_static",
+					input_cell2: "[fire]",
+					output_cell1: "steel_static",
+					output_cell2: "steam"
+				}
+			},
+			{
+				attr: {
+					probability: 100,
+					input_cell1: "steelfrost_static",
+					input_cell2: "lava",
+					output_cell1: "steel_static",
+					output_cell2: "lavarock_static"
+				}
+			},
+			{
+				attr: {
+					probability: 100,
+					input_cell1: "steelfrost_static",
+					input_cell2: "[water]",
+					output_cell1: "steelfrost_static",
+					output_cell2: "ice_static"
 				}
 			},
 			{
